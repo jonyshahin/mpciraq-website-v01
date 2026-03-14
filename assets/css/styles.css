@@ -746,6 +746,69 @@ textarea:focus {
     transform: translateY(0);
 }
 
+/* Active nav link */
+
+.nav-active {
+    color: var(--gold-soft) !important;
+}
+
+.nav-active::after {
+    width: 100% !important;
+}
+
+/* Leadership page — Chairman */
+
+.chairman-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr);
+    gap: 3rem;
+    align-items: start;
+}
+
+.chairman-photo img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    border: 3px solid var(--gold-soft);
+    box-shadow: var(--shadow-soft);
+    object-fit: cover;
+}
+
+.chairman-info p {
+    color: var(--muted);
+    line-height: 1.9;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.chairman-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.chairman-languages {
+    margin-top: 1.2rem;
+    font-size: 0.85rem !important;
+    color: var(--gold-soft) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+/* Board grid — two columns variant */
+
+.board-grid--two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 720px;
+    margin-inline: auto;
+}
+
+.board-bio {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-top: 0.6rem;
+    line-height: 1.7;
+}
+
 /* Responsive */
 
 @media (max-width: 992px) {
@@ -761,8 +824,14 @@ textarea:focus {
     .mission-vision-grid,
     .board-grid,
     .contact-grid,
-    .cards-grid {
+    .cards-grid,
+    .chairman-grid {
         grid-template-columns: minmax(0,1fr);
+    }
+
+    .board-grid--two {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 400px;
     }
 
     .values-grid {
